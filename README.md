@@ -2,22 +2,6 @@
 
 A comprehensive implementation of U-Net and hybrid ResNet+U-Net models for semantic segmentation, built from scratch using PyTorch.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Architecture](#architecture)
-  - [U-Net](#u-net)
-  - [ResNet+U-Net Hybrid](#resnetunet-hybrid)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model Architecture Details](#model-architecture-details)
-- [Training](#training)
-- [Results](#results)
-- [File Structure](#file-structure)
-- [Requirements](#requirements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -70,34 +54,7 @@ The hybrid model combines the strengths of both architectures:
 - Maintains the benefit of U-Net's skip connections for detailed segmentation
 - More efficient training on limited datasets
 
-## Features
 
-✨ **Key Features:**
-
-- 📐 **Pure PyTorch Implementation**: No reliance on external segmentation libraries
-- 🏗️ **Multiple Architecture Options**: Classic U-Net and ResNet+U-Net hybrid
-- 🔄 **Skip Connections**: Efficient gradient flow and spatial information preservation
-- 📊 **Flexible Input Sizes**: Handles various image dimensions
-- 🎯 **Multi-class Segmentation**: Support for binary and multi-class segmentation tasks
-- 🚀 **Transfer Learning Ready**: Optional pre-trained weights for ResNet backbone
-- 📈 **Training Scripts**: Complete training pipeline with validation
-- 💾 **Model Checkpointing**: Save and load trained models
-- 📉 **Comprehensive Logging**: Track training metrics and visualizations
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/ComputerFish/U-Net-from-scratch.git
-cd U-Net-from-scratch
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
 
 ## Usage
 
@@ -261,57 +218,6 @@ Refer to the `train.py` script for a complete training pipeline including:
 
 4. **Batch Size**: 2-16 depending on GPU memory and image size
 
-## Results
-
-Results will depend on your specific dataset and training configuration. Typical performance metrics include:
-- **Dice Coefficient**: Measures overlap between predicted and ground truth segmentations
-- **IoU (Intersection over Union)**: Computes the ratio of true positives
-- **Pixel Accuracy**: Percentage of correctly classified pixels
-
-## File Structure
-
-```
-U-Net-from-scratch/
-├── README.md
-├── requirements.txt
-├── models/
-│   ├── __init__.py
-│   ├── unet.py              # Classic U-Net implementation
-│   └── resnet_unet.py       # ResNet+U-Net hybrid model
-├── train.py                 # Training script
-├── evaluate.py              # Evaluation script
-├── utils/
-│   ├── __init__.py
-│   ├── data_loader.py       # Data loading utilities
-│   └── metrics.py           # Evaluation metrics
-└── examples/
-    └── example_usage.py     # Usage examples
-```
-
-## Requirements
-
-- Python 3.7+
-- PyTorch 1.9+
-- torchvision
-- NumPy
-- Pillow
-- tqdm (for progress bars)
-
-See `requirements.txt` for specific versions.
-
-## Contributing
-
-Contributions are welcome! Please feel free to:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## References
 
 - **Original U-Net Paper**: Ronneberger, O., Fischer, P., & Brox, T. (2015). "U-Net: Convolutional Networks for Biomedical Image Segmentation." MICCAI 2015.
@@ -321,5 +227,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Created by**: ComputerFish  
 **Last Updated**: January 2026
-
-For questions or issues, please open an GitHub issue or contact the repository maintainer.
